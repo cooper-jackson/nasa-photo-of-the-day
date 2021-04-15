@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from "react";
 import "./App.css";
 import axios from 'axios';
-import Photo from './Photo.js'
-import DataContent from './DataContent.js'
+import Photo from './Components/Photo.js'
+import styled from "styled-components"
 
 function App() {
 
@@ -19,12 +19,23 @@ function App() {
     })
   }, [])
 
+  const DataContent = styled.ul`
+    color: #5f5f5f;
+    justify-content: center;
+    margin: auto;
+    width: 75%;
+`
+
   return (
     <div className="App">
       <div className="content-container">
         <Photo photo={photo}/>
-        {console.log(photo)}
-        <DataContent photo={photo}/> */
+        <DataContent>
+          <li> Title: {photo.title}</li>
+          <li> Date: {photo.date}</li>
+          <li> Explanation: {photo.explanation}</li>
+          <li> URL: <a href={photo.url}>{photo.url}</a></li>
+        </DataContent>
       </div>
     </div>
   );

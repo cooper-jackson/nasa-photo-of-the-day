@@ -9,9 +9,9 @@
 }
 
 .content-container {
-  /* display: flex;
+  display: flex;
   align-items: center;
-  justify-content: center; */
+  flex-direction: column;
 }
 
 .App-logo {
@@ -39,6 +39,11 @@
 .App-link {
   color: #61dafb;
 }
+
+/* .photoWrapper {
+  display: flex;
+  justify-content: center;
+} */
 
 @keyframes App-logo-spin {
   from {
